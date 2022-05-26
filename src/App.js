@@ -3,7 +3,7 @@ import React from 'react';
 import './App.css';
 function MyList(props) {
   const items = props.items;
-  const listItems = numbers.map((item) =>
+  const listItems = items.map((item) =>
     <li>{item}</li>
   );
   function App() {
@@ -11,11 +11,10 @@ function MyList(props) {
       <ul>{listItems}</ul>
     );
   }
-  const items = [item1, item2, item3, item4, item5];
+  // const items = [item1, item2, item3, item4, item5];
   ReactDOM.render(
     <MyList items={items} />,
     document.getElementById('root')
   );
 }
-
 export default App;
