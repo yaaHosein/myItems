@@ -1,7 +1,8 @@
 function EntryList() {
 
-    return
+    return (
     <div></div>
+    )
 }
 
 export default EntryList;
