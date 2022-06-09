@@ -1,1 +1,7 @@
-function MyList(props) {}  
+function MyList() {
+
+    return
+    <div></div>
+}  
+
+export default MyList
