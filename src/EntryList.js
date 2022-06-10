@@ -1,7 +1,12 @@
 function EntryList() {
 
     return (
-    <div></div>
+        <div>
+            <label>My List</label>
+            <tr>
+                <th>Enter Something</th>
+            </tr>
+        </div>
     )
 }
 
