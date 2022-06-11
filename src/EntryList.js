@@ -8,6 +8,10 @@ function EntryList() {
                     <input type="text" placeholder="Enter Something"> </input>
                 </label>
             </form>
+            <div class="w3-padding w3-xlarge w3-teal">
+                <i class="glyphicon glyphicon-trash"></i>
+
+            </div>
         </div>
     )
 }
