@@ -1,4 +1,5 @@
 import { EntryList } from "./EntryList";
+
 function App() {
   return (
       <div>
@@ -8,3 +9,4 @@ function App() {
   )};
 
 export default App;
+
