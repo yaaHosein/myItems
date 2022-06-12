@@ -2,15 +2,13 @@ function EntryList() {
 
     return (
         <>
-            {
                 <span>
                     <ul>
                         Apple
                         watermelon
                         banana
                     </ul>
-                </span>
-            }
+            </span>
         </>
 
     )
