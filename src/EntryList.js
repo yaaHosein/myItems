@@ -4,5 +4,4 @@ function EntryList() {
         <span></span>
     )
 }
-
 export default EntryList;
