@@ -1,5 +1,4 @@
-import { EntryList } from "./EntryList";
-
+import EntryList from "./EntryList.js";
 function App() {
   return (
       <div>
