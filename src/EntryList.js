@@ -1,7 +1,18 @@
 function EntryList() {
 
     return (
-        <span></span>
+        <>
+            {
+                <span>
+                    <ul>
+                        Apple
+                        watermelon
+                        banana
+                    </ul>
+                </span>
+            }
+        </>
+
     )
 }
 export default EntryList;
