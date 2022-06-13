@@ -1,6 +1,6 @@
 import EntryList from "./EntryList";
 import './App.css';
-
+const fruits = ["carrot"]
 function App() {
   return
   (
