@@ -1,6 +1,5 @@
-
-function EntryList() {
-    let fruits = ["carrot"]
+import App from "./App";
+function EntryList(props) {
     return
     (
         <ul>
