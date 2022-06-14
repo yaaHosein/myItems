@@ -4,7 +4,7 @@ function EntryList(props) {
     (
         <ul>
             {fruits.map(function (fruit) {
-                return <li>{props.fruits}</li>
+                return <li>{props.fruits.map}</li>
             })}
         </ul>)
 
