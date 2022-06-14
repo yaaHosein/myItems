@@ -1,11 +1,11 @@
 import EntryList from "./EntryList";
 import './App.css';
 const fruits = ["carrot"]
-function App(props) {
+function App() {
   return
   (
     <div className="App">
-      <EntryList fruits={props.fruits} />
+      <EntryList fruits={fruits} />
 
     </div>
   )
