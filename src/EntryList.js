@@ -1,8 +1,8 @@
-
 function EntryList(props) {
+    console.log(props) 
     return (
         <>
-        <ul>
+            <ul> 
             {fruits.map(function (fruit) {
                 return <li>{props.fruits.map}</li>
             })}
@@ -10,4 +10,5 @@ function EntryList(props) {
         </>
     )
 }
+
 export default EntryList;
