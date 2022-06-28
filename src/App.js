@@ -1,11 +1,11 @@
 import EntryList from "./EntryList";
 import './App.css';
-const fruits = ["carrot"];
+const items = ["carrot ", "Orange ", "Banana "];
 function App() {
   return (
     <>
-    <div className="App">
-      <EntryList fruits={fruits} />
+      <div className="App">
+        <EntryList items={items} />
     </div>
     </>
   )
