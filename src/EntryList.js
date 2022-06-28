@@ -21,7 +21,11 @@ function EntryList(props) {
                     // setting setItems fun for setting the new array as a vlue 
                 }} /></li>
         })}</ul>
-        <button onClick={function () { }}>Add</button>
+        <button onClick={function () {
+            const itemArrayCopy = [...items];
+            itemArrayCopy.push("");
+            setitems(itemArrayCopy);
+        }}>Add</button>
     </>)
 }
 export default EntryList;
