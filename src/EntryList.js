@@ -3,7 +3,7 @@ import { useState } from "react"
 function EntryList(props) {
     //defining EntryList function//
     const [items, setitems] = useState(props.items)
-    // defining useState var and assing 
+    // defining useState var and assing
     return (<>
         <ul>{items.map(function (item, index) {
             // adding unordered list tag and looping arround items by using map function //
@@ -30,8 +30,13 @@ function EntryList(props) {
         <button onClick={function () {
             const itemArrayCopy = [...items];
             itemArrayCopy.push("");
-            setitems(itemArrayCopy);
+            setitems(itemArrayCopy);   
         }}>Add</button>
+
+        <button onClick={function () {
+            setitems([]);
+        }}>Remove All</button>
+
     </>)
 }
 export default EntryList;
