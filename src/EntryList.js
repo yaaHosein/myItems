@@ -3,8 +3,7 @@ import { useState } from "react"
 function EntryList(props) {
     //defining EntryList function//
     const [items, setitems] = useState(props.items)
-    // defining useState var and assing
-
+    // defining useState var and assigning it to useState hoook 
     return (<>
         <ul>
             {items.map(function (item, index) {
@@ -19,7 +18,7 @@ function EntryList(props) {
                         itemArrayCopy[index] = newValue;
                         // updating the new array value using the index paramter
                         setitems(itemArrayCopy);
-                        // setting setItems fun for setting the new array as a vlue
+                        // setting setItems for setting the new array as a value
                     }} />
                     <button onClick={function () {
                         const itemArrayCopy = [...items];
