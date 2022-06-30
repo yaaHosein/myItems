@@ -25,11 +25,13 @@ function EntryList(props) {
                         const itemArrayCopy = [...items];
                         itemArrayCopy.splice(1, 1);
                         setitems(itemArrayCopy);
-                        console.log("mm", setitems())
-                        console.log("ff", setitems(itemArrayCopy))
-                        console.log("ww", setitems(itemArrayCopy) !== setitems())
                     }}>X</button>
 
+                    <button onClick={function () {
+                        const itemArrayCopy = [...items];
+                        itemArrayCopy[index] = ""
+                        setitems(itemArrayCopy);
+                    }}>Clear</button>
                 </li>
             })}</ul>
         <button onClick={function () {
@@ -43,14 +45,11 @@ function EntryList(props) {
         }}>Remove All</button>
 
         <button onClick={function () {
-            const clearedItems = items.map(function (item) {
+            const clearedItems = items.map(function () {
                 return "";
             })
             setitems(clearedItems);
-
         }}>Clear All</button>
-
     </>)
 }
 export default EntryList;
-
