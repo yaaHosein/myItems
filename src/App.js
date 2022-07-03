@@ -5,10 +5,12 @@ function App() {
   return (
     <>
       <div className="App">
-        <EntryList items={items} />
+        <EntryList items={items} onChange={function (newItems) {
+          const StringedItems = JSON.stringify(newItems);
+          localStorage.setItem("foo", StringedItems)
+        }} />
     </div>
     </>
   )
 }
 export default App;
-
