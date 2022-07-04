@@ -78,6 +78,7 @@ function EntryList(props) {
                         return "";
                     });
                     setitems(clearedItems);
+                    // calling props.onChange() and passing the new Items state to it
                     props.onChange(clearedItems);
                 }}
             >
