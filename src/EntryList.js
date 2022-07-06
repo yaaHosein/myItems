@@ -1,5 +1,5 @@
 import { useState } from "react";
-// importi useState hook from react liberrary//
+// importing useState hook from react liberrary//
 function EntryList(props) {
   //defining EntryList function//
     const [items, setitems] = useState(props.items);
@@ -30,7 +30,7 @@ function EntryList(props) {
                             <button
                                 onClick={function () {
                                     const itemArrayCopy = [...items];
-                                    itemArrayCopy.splice(1, 1);
+                                    itemArrayCopy.splice(index, 1);
                                     setitems(itemArrayCopy);
                                     props.onChange(itemArrayCopy);
                                 }}
