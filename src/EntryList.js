@@ -1,9 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // importing useState hook from react liberrary//
 function EntryList(props) {
   //defining EntryList function//
     const [items, setitems] = useState(props.items);
   // defining useState var and assigning it to useState hoook
+    useEffect(
+        (item) => {
+            props.onChange(items);
+        },
+        [items]
+    );
     return (
         <>
             <ul>
@@ -24,30 +30,28 @@ function EntryList(props) {
                                     // updating the new array value using the index paramter
                                     setitems(itemArrayCopy);
                   // setting setItems for setting the new array as a value
-                                    props.onChange(itemArrayCopy);
-                                }}
-                            />
-                            <button
-                                onClick={function () {
-                                    const itemArrayCopy = [...items];
-                                    itemArrayCopy.splice(index, 1);
-                                    setitems(itemArrayCopy);
-                                    props.onChange(itemArrayCopy);
-                                }}
-                            >
-                                X
-                            </button>
+                        }}
+                    />
+                    <button
+                        onClick={function () {
+                            const itemArrayCopy = [...items];
+                            itemArrayCopy.splice(index, 1);
+                            setitems(itemArrayCopy);
+                        }}
+                    >
+                        X
+                    </button>
 
-                            <button
-                                onClick={function () {
-                                    const itemArrayCopy = [...items];
-                                    itemArrayCopy[index] = "";
-                                    setitems(itemArrayCopy);
-                                    props.onChange(itemArrayCopy);
-                                }}
-                            >
-                                Clear
-                            </button>
+                    <button
+                        onClick={function () {
+                            const itemArrayCopy = [...items];
+                            itemArrayCopy[index] = "";
+                            setitems(itemArrayCopy);
+                            props.onChange(itemArrayCopy);
+                        }}
+                    >
+                        Clear
+                    </button>
                 </li>
                     );
                 })}
@@ -57,7 +61,6 @@ function EntryList(props) {
                     const itemArrayCopy = [...items];
                     itemArrayCopy.push("");
                     setitems(itemArrayCopy);
-                    props.onChange(itemArrayCopy);
                 }}
             >
                 Add
@@ -66,7 +69,6 @@ function EntryList(props) {
                 onClick={function () {
                     const emptyArry = [];
                     setitems(emptyArry);
-                    props.onChange(emptyArry);
                 }}
             >
                 Remove All
