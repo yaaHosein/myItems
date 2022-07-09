@@ -4,8 +4,9 @@ function EntryList(props) {
   //defining EntryList function//
     const [items, setitems] = useState(props.items);
   // defining useState var and assigning it to useState hoook
+
     useEffect(
-        (item) => {
+        () => {
             props.onChange(items);
         },
         [items]
@@ -47,7 +48,6 @@ function EntryList(props) {
                             const itemArrayCopy = [...items];
                             itemArrayCopy[index] = "";
                             setitems(itemArrayCopy);
-                            props.onChange(itemArrayCopy);
                         }}
                     >
                         Clear
@@ -80,8 +80,6 @@ function EntryList(props) {
                         return "";
                     });
                     setitems(clearedItems);
-                    // calling props.onChange() and passing the new Items state to it
-                    props.onChange(clearedItems);
                 }}
             >
                 Clear All
