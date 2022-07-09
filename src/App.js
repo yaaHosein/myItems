@@ -6,27 +6,26 @@ if (localStorage.getItem("foo")) {
 }
 function App() {
   return (
-      <div className="App">
-        <EntryList
-          items={items}
-          onChange={function (newItems) {
+    <div className="App">
+      <EntryList
+        items={items}
+        onChange={function (newItems) {
+          if (Array.isArray(newItems)) {
             const json = JSON.stringify(newItems);
             localStorage.setItem("foo", json);
-          }}
-        />
+            // save new items in local storage
+          }
+        }}
+      />
     </div>
   );
 }
 export default App;
 
-
-
-
 function map(array, callback) {
   const result = [];
   for (let i = 0; i < array.length; i++) {
-    callback(array[i])
+    callback(array[i]);
   }
-  return result
-
+  return result;
 }
