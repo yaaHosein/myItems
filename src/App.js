@@ -1,21 +1,33 @@
-import React from 'react';
+import EntryList from "./EntryList";
+import "./App.css";
+import { useEffect } from "react";
 
-import './App.css';
-function MyList(props) {
-  const items = props.items;
-  const listItems = numbers.map((item) =>
-    <li>{item}</li>
-  );
-  function App() {
-    return (
-      <ul>{listItems}</ul>
-    );
-  }
-  const items = [item1, item2, item3, item4, item5];
-  ReactDOM.render(
-    <MyList items={items} />,
-    document.getElementById('root')
+let items = ["carrot ", "Orange ", "Banana "];
+if (localStorage.getItem("foo")) {
+  items = JSON.parse(localStorage.getItem("foo"));
+}
+function App() {
+  useEffect(() => {
+    fetch("http://localhost:9300/").then((response) => {
+      response.json(items).then((item) => { });
+    }).catch(error => {
+      console.log("error==>", error)
+    })
+  }, []);
+
+  return (
+    <div className="App">
+      <EntryList
+        items={items}
+        onChange={function (newItems) {
+          if (Array.isArray(newItems)) {
+            const json = JSON.stringify(newItems);
+            localStorage.setItem("foo", json);
+            // save new items in local storage
+          }
+        }}
+      />
+    </div>
   );
 }
-
 export default App;
