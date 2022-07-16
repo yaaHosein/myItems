@@ -11,6 +11,9 @@ function EntryList(props) {
         },
         [items]
     );
+    useEffect(() => {
+        setitems(props.items)
+    }, [props.items])
     return (
         <>
             <ul>
