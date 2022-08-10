@@ -7,7 +7,7 @@ if (localStorage.getItem("foo")) {
   console.log(localStorage.getItem("foo"));
   items = JSON.parse(localStorage.getItem("foo"));
 }
-
+ 
 function App() {
   let [xxx, setXxx] = useState([]);
   console.log(xxx);
