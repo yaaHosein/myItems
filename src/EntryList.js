@@ -85,7 +85,7 @@ function EntryList(props) {
 
             <button
                 disabled={items.every(function (item) {
-                    return item === "";
+                    return item.trim() === "";
                 })}
                 onClick={function () {
                     const clearedItems = items.map(function () {
