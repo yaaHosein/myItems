@@ -4,21 +4,27 @@ function EntryList(props) {
   //defining EntryList function//
     const [items, setitems] = useState(props.items);
   // defining useState var and assigning it to useState hook
-
-    useEffect(
-        () => {
-            props.onChange(items);
-        },
-        [items]
-    );
     useEffect(() => {
-        setitems(props.items)
-    }, [props.items])
+        props.onChange(items);
+    }, [items]);
+    useEffect(() => {
+        setitems(props.items);
+    }, [props.items]);
+    let allEmpty = true;
+
+    for (let i = 0; i > items.length; i++) {
+        if (items !== "") {
+            allEmpty = false;
+            break;
+        }
+    }
+
     return (
         <>
             <ul>
                 {items.map(function (item, index) {
           // adding unordered list tag and looping around items by using map function //
+
                     return (
                         <li key={index}>
                             <input
@@ -45,8 +51,8 @@ function EntryList(props) {
                     >
                         X
                     </button>
-
                     <button
+                        disabled={item.trim() === ""}
                         onClick={function () {
                             const itemArrayCopy = [...items];
                             itemArrayCopy[index] = "";
@@ -78,6 +84,9 @@ function EntryList(props) {
             </button>
 
             <button
+                disabled={items.every(function (item) {
+                    return item === "";
+                })}
                 onClick={function () {
                     const clearedItems = items.map(function () {
                         return "";

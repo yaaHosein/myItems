@@ -2,12 +2,17 @@ import EntryList from "./EntryList";
 import "./App.css";
 import { useEffect, useState } from "react";
 let items = [];
+
 if (localStorage.getItem("foo")) {
-  console.log(localStorage.getItem("foo"))
+  console.log(localStorage.getItem("foo"));
   items = JSON.parse(localStorage.getItem("foo"));
 }
+
 function App() {
   let [xxx, setXxx] = useState([]);
+  console.log(xxx);
+  console.log(items);
+  console.log(localStorage.getItem("foo"));
   useEffect(() => {
     if (localStorage.getItem("foo") !== null) {
       setXxx(items);
@@ -17,8 +22,11 @@ function App() {
         .then((response) => {
           response.json().then((parsedServerData) => {
             setXxx(parsedServerData);
+            console.log(response);
           });
+          console.log(response);
         })
+
         .catch((error) => {
           console.log("error==>", error);
         });
