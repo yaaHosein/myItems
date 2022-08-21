@@ -31,6 +31,7 @@ function EntryList(props) {
                     <input
                         type="text"
                         value={item}
+                        aria-label="entry list input"
                         onChange={function (event) {
                             // inside list items tag adding input tag for text input and assigning its default value to item; also adding onChange function for changing the fields contents //
                             const newValue = event.target.value;
