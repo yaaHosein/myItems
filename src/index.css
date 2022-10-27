@@ -11,3 +11,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.btn {
+  background: var(--clr-primary-5);
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius);
+  text-transform: capitalize;
+  color: blue;
+  letter-spacing: var(--spacing);
+  border-color: transparent;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+
+h3 {
+  margin-top: 0px  ;
+  background: var(--clr-primary-5);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius);
+  text-transform: capitalize;
+  color:rgba(255, 1, 103, 0.695);
+  letter-spacing: var(--spacing);
+  border-color: transparent;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 5 px;
+}

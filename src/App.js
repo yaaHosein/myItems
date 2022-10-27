@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 
 import EntryList from "./EntryList";
 import "./App.css";
 import { useEffect, useState } from "react";
 let items = [];
 
+=======
+import EntryList from "./EntryList";
+import "./App.css";
+import { useEffect, useState } from "react";
+let items = [];
+
+>>>>>>> b5316c426c395a5a8d34650b2fd1b6b46a0b017e
 if (localStorage.getItem("foo")) {
   console.log(localStorage.getItem("foo"));
   items = JSON.parse(localStorage.getItem("foo"));
